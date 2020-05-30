@@ -42,6 +42,12 @@ extension LoginViewController {
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
+        if !userNameTextField.text!.isEmpty {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            userNameTextField.becomeFirstResponder()
+        }
         return true
     }
 }
