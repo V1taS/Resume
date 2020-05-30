@@ -10,11 +10,7 @@ import UIKit
 
 extension LoginViewController {
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-        self.view.endEditing(true)
-    }
-    
+    // MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "LoginSegue" {
             let tabBarController = segue.destination as! UITabBarController
@@ -23,6 +19,7 @@ extension LoginViewController {
         }
     }
     
+    // MARK: - Notification function
     func getAlert(title: String, message: String) {
         let alertController = UIAlertController(
             title: title,
@@ -37,12 +34,18 @@ extension LoginViewController {
         alertController.addAction(doneAction)
         present(alertController, animated: true, completion: nil)
     }
+    
+    // MARK: - Hide keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
 }
 
+    // MARK: - Logic TextField
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
+
         if !userNameTextField.text!.isEmpty {
             passwordTextField.becomeFirstResponder()
         } else {
