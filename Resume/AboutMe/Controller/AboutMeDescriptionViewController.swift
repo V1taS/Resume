@@ -10,14 +10,14 @@ import UIKit
 
 class AboutMeDescriptionViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var buttonOutlet: UIButton!
     
     var name: String! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        buttonOutlet.layer.cornerRadius = buttonOutlet.frame.width / 20
         nameLabel.text = name
     }
-    
-
 }

@@ -126,6 +126,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="About me" id="ZJB-E5-jcp"/>
                     <connections>
+                        <outlet property="buttonOutlet" destination="0bI-Ri-jEH" id="iRX-fP-HMl"/>
                         <outlet property="textField" destination="ToT-PV-zTm" id="A0U-87-ErV"/>
                         <segue destination="0Rb-Uq-q66" kind="presentation" identifier="AboutMeSegue" modalPresentationStyle="fullScreen" id="rln-Qo-J9F"/>
                     </connections>
@@ -198,6 +199,7 @@
                         <viewLayoutGuide key="safeArea" id="BiR-Ru-FNE"/>
                     </view>
                     <connections>
+                        <outlet property="buttonOutlet" destination="Vcp-4n-1fe" id="LNu-MT-CRp"/>
                         <outlet property="nameLabel" destination="b7V-7g-DkA" id="4HG-E4-zOS"/>
                     </connections>
                 </viewController>

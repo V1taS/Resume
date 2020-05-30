@@ -11,9 +11,11 @@ import UIKit
 class AboutMeViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var buttonOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonOutlet.layer.cornerRadius = buttonOutlet.frame.width / 13
     }
     
     @IBAction func nextAction() {
